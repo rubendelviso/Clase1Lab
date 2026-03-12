@@ -1,15 +1,17 @@
 //Para crear un objeto en javascript
-{ key1: valor1, key2, key3 }// Solo un ejemplo
+// { key1: valor1, key2, key3 }// Solo un ejemplo
 
 // Palabras resservadas recordar
 
-const hola = 12
-var chau = "abc"
-//Podria
+const hola = 12   //Siempre tratar de usar la palabra reservada const
+var chau = "abc"  //Como ultima instancia usar la palabra var o let
 
-const listaDeKeys = { key1: valor1, key2: valor2, key3valor3 }
+//Aca solo mostramos que key no cambia. En cambio el valor del objeto si puede cambiar 
+//const listaDeKeys = { key1: valor1, key2: valor2, key3valor3 }
 
-//Ejemplo de objeto
+
+//----------------------------------------------------------------v----------------------------------------------------------------
+//Ejemplo de como defininr un objeto y sus diferentes atributos
 
 Persona1 = { nombre: "Pablo", edad: 17, residencia: { calle: 2, numero: 3200, localidad: "Jose C Paz", provincia: "Buenos Aires" },
 esMayor:function(value){return value>18}}
@@ -18,6 +20,7 @@ esMayor:function(value){return value>18}}
 Persona1.edad = 19
 Persona1["edad"] = 20
 console.log("la edad es",Persona1.edad) 
+
 
 //Diferentes formas de definir los objetos
 // Por ejemplo en una lista
@@ -34,13 +37,14 @@ const al3 = {nombre:"Ruben", aprobadas:12, tieneIngles:true}
 
 const listaDeAlumnos = [al1,al2,al3]//Forma de definir por extension
 
-listaDeAlumnos[al2]["aprobadas"]=20 //Forma de acceder a un lugar en la lista
+listaDeAlumnos[1]["aprobadas"]=20 //Forma de acceder a un lugar en la lista
 
 listaDeAlumnos.push({nombre:"alexis", aprobadas:14, tieneIngles:true})
 
-listaDeAlumnos.length()//Ahora tengo 4
+console.log(listaDeAlumnos.length)//Ahora tengo 4
 
-function fultro (values){
+//Formas de hacer un filtro
+function filtro (values){
     const result = []
     for(let i=0; i<values.length;i++){
         if(values[i].aprobadas >=20 && values[i].tieneIngles){result.push(values[i])}  
@@ -48,12 +52,11 @@ function fultro (values){
 }
 
 
-//Ahora con arrow functions
+//Ahora el filtro pero solo con arrow functions
 
 const falu = (value)=> value.aprobadas>=20 && value.tieneIngles
 
-falu({al1},{al2})
+// falu({al1},{al2})
+//Recordemos que este tipo de funciones solo recibe funciones como parametro
 
-listaDeAlumnos.filter(falu())
-
-console.log(listaDeAlumnos.filter(falu()))
+console.log(listaDeAlumnos.filter(falu))  //Por algun motivo cuando le paso la funcion va sin el parentesis como se ve en la funcion
