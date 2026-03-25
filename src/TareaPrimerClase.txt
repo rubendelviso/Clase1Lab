@@ -1,0 +1,44 @@
+Preparar un array de alumnos que contenga varios alumnos que tenga la siguiente estructura 
+const alumnos = [
+  {
+    "nombre": "Juan",
+    "aprobadas": [
+      "Matemáticas",
+      "Historia",
+      "Lengua"
+    ],
+    "tieneIngles": true
+  },
+  {
+    "nombre": "Maria",
+    "aprobadas": [
+      "Matemáticas",
+      "Química",
+      "Física"
+    ],
+    "tieneIngles": false
+  },
+  {
+    "nombre": "Pedro",
+    "aprobadas": [
+      "Biología",
+      "Geografía",
+      "Matemáticas"
+    ],
+    "tieneIngles": true
+  },
+  {
+    "nombre": "Ana",
+    "aprobadas": [
+      "Lengua",
+      "Historia",
+      "Física"
+    ],
+    "tieneIngles": false
+  }
+];
+
+Respecto a esta estructura tenemos que crear una funcion que valide si un alumno aprobo 3 o mas materias y si ademas tiene ingles
+Agregarle a aquellos alumnos que aprobaron mas de una materia, otra mas que se llame primeros pasos
+Imprimir la lista de objetos original y la lista que obtengo de resultado corroborar similitudes y diferencias
+tarea extra : Verificar que diferentes metodos (fin)
