@@ -41,4 +41,4 @@ const alumnos = [
 Respecto a esta estructura tenemos que crear una funcion que valide si un alumno aprobo 3 o mas materias y si ademas tiene ingles
 Agregarle a aquellos alumnos que aprobaron mas de una materia, otra mas que se llame primeros pasos
 Imprimir la lista de objetos original y la lista que obtengo de resultado corroborar similitudes y diferencias
-tarea extra : Verificar que diferentes metodos (fin)
+tarea extra : Verificar que diferentes metodos ()
