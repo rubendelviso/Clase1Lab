@@ -150,3 +150,6 @@ const aa = [8,9,11,13,listaObj]
 //console.log(a.includes({x:0,y:0}))
 
 //console.log(a.includes(listaObj)) //La diferencia con lo anterior es q esta apuntando o haciendo referencia a una referencia en memoria diferente
+
+//Otra forma de pasarlo seria
+
