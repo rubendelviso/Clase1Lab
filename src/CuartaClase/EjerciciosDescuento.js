@@ -88,4 +88,4 @@ const resultado = productos.map(produ => {
 )
 
 
-console.log(resultado)
+console.log(resultado)  

@@ -125,7 +125,7 @@ const resultadoFiltro =(p)=> {
 const listaValidada = []
 
 
-    for(let i=0; i<productos.length;i++){
+for(let i=0; i<productos.length;i++){
         const objetoNuevo = resultadoFiltro(productos[i])
         listaValidada.push(productos[i].nombre)
         listaValidada.push(objetoNuevo)
