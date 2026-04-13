@@ -49,7 +49,7 @@ for(producto of tienda.productos){
 
 //Mas sobre funciones en javascript
 const fn = function (n) { return n * 3 }
-
+        //->        N*3  
 function compose(paramFn) { // paramfn = 9
 
   return function(paramValue) {

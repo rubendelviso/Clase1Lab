@@ -42,7 +42,7 @@ if (!r) console.log ("Probando el some como every")
 
 const listaBooleana = [2,8,6]
 
-const ListaMap = listaBooleana.map (x => x+1)
+const ListaMap = listaBooleana.map (x => x+1)//[3.9,7]
 const resultadoListaMap = listaBooleana.map (x => x%2 ===0)// A su vez puede devolver un booleano,
 //                                                          osea le puedo pasar una expresion y puede transformarlos en booleanos
 
