@@ -76,6 +76,7 @@ Pensá:
 acc arranca como {}
 si la categoría no existe → crearla
 si existe → acumular
+----------------------------------------
 🧪 Ejercicio 4 — Máximo y mínimo con reduce
 📝 Enunciado
 
@@ -90,7 +91,7 @@ Usando únicamente reduce.
 
 👉 En vez de guardar solo un número:
 guardá el objeto completo
-
+----------------------------------------
 🧪 Ejercicio 5 — Pipeline funcional
 📝 Enunciado
 
@@ -128,6 +129,7 @@ aplicar fn(acc, elemento)
 Explicá con tus palabras:
 
 ¿Por qué el uso de closures permite desacoplar la lógica de validación de los datos?
+recuerda y puede acceder a variables de su entorno, incluso después de que ese entorno ya terminó de ejecutarse
 
 🎯 Qué esperan
 
