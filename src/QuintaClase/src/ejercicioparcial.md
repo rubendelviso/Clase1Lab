@@ -76,6 +76,7 @@ Pensá:
 acc arranca como {}
 si la categoría no existe → crearla
 si existe → acumular
+------------------------------------------------
 🧪 Ejercicio 4 — Máximo y mínimo con reduce
 📝 Enunciado
 

@@ -14,7 +14,7 @@ const reglas = [
   { campo: "activo", valor: true }
 ];
 
-
+//------------------------Ejercicio nª1------------------------
 const makeFunction = reglas.map((reg)=> {return (prod)=>validaciones[reg.campo](prod,reg.valor)}) // Esto devuelve [()=> {}]
 //prod.edad > 18 ? 
 const Verificadora = usuarios.filter((usu)=>makeFunction.every(fn =>fn(usu)))
@@ -27,7 +27,7 @@ const productos = [
   { nombre: "Pelota", categoria: "deportivo", precio: 100, stock: 30 },
   { nombre: "Notebook", categoria: "tecnologia", precio: 2000, stock: 5 }
 ];
-
+//------------------------Ejercicio nª3------------------------
 const StockTotal = productos.reduce((acc,cur) =>{ 
     const categoria = cur.categoria
     //prod[]
@@ -38,5 +38,17 @@ const StockTotal = productos.reduce((acc,cur) =>{
     audio:0,
     deportivo:0
 }) 
-console.log("soy una bestia")
+
 console.log(StockTotal)
+
+//------------------------Ejercicio nª4------------------------
+
+const maximoMinimo = productos.reduce((acc,curr)=> {
+  acc.mayorPrecio = (acc.mayorPrecio>curr.precio?curr.precio:acc.mayorPrecio)
+  acc.menorStock  = (curr.stock> acc.menorStock?acc.menorStock:curr.precio)        
+  //     //Primera vuelta:  0 >1?
+  return acc
+  
+},{mayorPrecio:-Infinity,menorStock:Infinity})
+
+console.log(maximoMinimo)
