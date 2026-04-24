@@ -34,7 +34,11 @@ app.get('/Productos',(req,res)=>{
 //  Quiero encontrar el producto que coincida con un id pero que sea uno cualquiera
 app.get('/ProductoNumero/:num',(req,res)=>{
     const id = req.params.num
+    if(isNaN(id)){
+        res.status(400).json({mensaje:`El parametro ingresado es incorrecto`})
+        return//Sin el return va a volver a ejecutar indefinidamente
 
+    }
     //Agregar validacion para el id q reciba 
     const AlumnoEncontrado = productos.find(prod => prod.id == id)
     if(!AlumnoEncontrado){res.status(404).json({
@@ -68,6 +72,19 @@ app.get('/categorias',(req,res)=>{
     res.status(200).json({ListValida})
 
 })
+
+app.get('/productos/categorias/find',(req,res)=>{
+
+    //Quiero buscar todos aquellos que cumplan la categoria que pongo como condicion en la key
+    const categorias = req.query.key //Guardado la cate 
+    // console.log(categorias) 
+    const categoriasFiltradas = productos.filter(prod=>prod.categorias == categorias)
+    // res.status(200).json({mensaje:`Los productos que busca son ${categoriasFiltradas}`})
+    res.status(200).json(categoriasFiltradas)
+    
+})
+
+//---------------------------------------------------------------
 
 //El listen es lo ultimo q va a hacer 
 app.listen(port,(err)=>{
