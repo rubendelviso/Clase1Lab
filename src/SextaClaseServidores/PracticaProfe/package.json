@@ -1,19 +1,18 @@
 {
-  "name": "sextaclase",
+  "name": "practicaprofe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "ApiRest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon NuevosMetodos",
-    "dev2": "nodemon PracticaConClaude",
-    "debug": "nodemon --exec \"node --inspect=9230\" PracticaConClaude.js"
+    "dev": "nodemon ApiRest.js",
+    "debug": "nodemon --exec \"node --inspect=9230\" ApiRest.js"
+
+  
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "express": "^5.2.1"
   },

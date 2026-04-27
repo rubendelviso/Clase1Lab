@@ -9,7 +9,7 @@ const productos = require('../QuintaClase/productos.json')
 
 //Ahora necesito definir un puerto para que escuche en alguna parte del servidor
 const port = 3001
-app.use(express.json());
+app.use(express.json());    
 //Aca irían todos mis endpoints  !!!Poner antes del listen
 app.get('/PrimerEndPoint',(req,res)=>{//Este endpoint devuelve 
     
