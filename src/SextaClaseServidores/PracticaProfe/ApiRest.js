@@ -86,6 +86,37 @@ app.get("/Ventas/SumaTotal",(req,res)=>{
     },0)
     res.status(200).json({total:ventasTotal})
 })
+//_------------------------------Algunos endpoints de claude
+const usuarios = [
+    { nombre: "Ana",   edad: 22, activo: true  },
+    { nombre: "Luis",  edad: 17, activo: false },
+    { nombre: "Carla", edad: 30, activo: true  },
+    { nombre: "Pedro", edad: 15, activo: true  },
+]
+
+// Devuelva usando un solo reduce:
+
+// json{
+//     "totalUsuarios": 4,
+//     "mayoresActivos": 2,
+//     "promedioEdad": 21
+// }
+app.get("/Usuarios/CalculaTotal",(req,res)=>{
+    const usuariosTotal = usuarios.reduce((acc,curr)=>{
+        acc.totalUsuarios+=1
+        acc.mayoresActivos = (curr.activo)?acc.mayoresActivos+1:acc.mayoresActivos
+        acc.promedioEdad = curr.edad+acc.promedioEdad
+        if(usuarios[usuarios.length-1]==curr){acc.promedioEdad = acc.promedioEdad/usuarios.length}
+        return acc
+    },{totalUsuarios:0,mayoresActivos:0,promedioEdad:0})
+    res.status(200).json(usuariosTotal)
+
+})
+
+
+
+
+
 
 //_------------------------------Poner la app a escuchar
 app.listen(PORT,(err)=>
