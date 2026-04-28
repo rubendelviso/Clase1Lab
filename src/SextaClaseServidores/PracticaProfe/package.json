@@ -5,8 +5,8 @@
   "main": "ApiRest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ApiRest.js",
-    "debug": "nodemon --exec \"node --inspect=9230\" ApiRest.js"
+    "dev": "nodemon ApiRestClaude.js",
+    "debug": "nodemon --exec \"node --inspect=9230\" ApiRestClaude.js"
 
   
   },
