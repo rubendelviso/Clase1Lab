@@ -177,21 +177,151 @@
 // const res = nums.map(n => fns.map(fn => fn(n)))
 
 // console.log(res[1])
-const productos = [
-  { nombre: "TV",     precio: 1000, stock: 0  },
-  { nombre: "Radio",  precio: 300,  stock: 5  },
-  { nombre: "Silla",  precio: 800,  stock: 2  },
-  { nombre: "Mesa",   precio: 1500, stock: 0  },
-  { nombre: "Lampara",precio: 400,  stock: 8  },
+// const productos = [
+//   { nombre: "TV",     precio: 1000, stock: 0  },
+//   { nombre: "Radio",  precio: 300,  stock: 5  },
+//   { nombre: "Silla",  precio: 800,  stock: 2  },
+//   { nombre: "Mesa",   precio: 1500, stock: 0  },
+//   { nombre: "Lampara",precio: 400,  stock: 8  },
+// ]
+
+// const res = productos
+//   .filter(p => p.stock > 0)
+//   .reduce((acc, curr) => {
+//     acc.cantidad += 1
+//     acc.valorTotal += curr.precio * curr.stock
+//     acc.masCaro = curr.precio > acc.masCaro.precio ? curr : acc.masCaro
+//     return acc
+//   }, { cantidad: 0, valorTotal: 0, masCaro: productos.find(p => p.stock > 0) })
+
+// console.log(res)
+
+// const nums = [4, 6, 9, 12, 15]
+
+// const fns = [
+//   n => n % 3 === 0,
+//   n => n % 2 === 0,
+//   n => n > 10
+// ]
+
+// const res = nums
+//   .map(n => fns.map(fn => fn(n)))
+//   .filter(arr => arr.every(v => v))
+
+// console.log(res)
+
+// const values = [2, 7, 8, 14]
+
+// const checks = [
+//   n => n * 2,
+//   n => n % 3,
+//   n => n - 5
+// ]
+
+// const res = values
+//   .map(v => checks.map(fn => fn(v)))
+//   .filter(arr => arr.includes(0))
+
+// console.log(res)
+
+// const nums = [5, 10, 20, 25]
+
+// const fns = {
+//   x: n => n % 10,
+//   y: n => n > 15,
+//   z: n => n / 5
+// }
+
+// const keys = ['x', 'y', 'z']
+
+// const res = nums
+//   .map(n => keys.map(k => fns[k](n)))
+//   .find(arr => arr[0] === 0 && arr[1])
+
+// console.log(res)
+
+// const nums = [3, 6, 8, 11, 14]
+
+// const fns = [
+//   n => n % 2 === 0,
+//   n => n > 7,
+//   n => n % 3 === 0
+// ]
+
+// const res = nums
+//   .map(n => fns.map(fn => fn(n)))
+//   .filter(arr => arr.some((v, i) => v && i === 0))
+//   .filter(arr => arr[1])
+
+// console.log(res)
+
+// const nums = [1, 4, 9, 16]
+
+// const fns = [
+//   n => n % 2 === 0,
+//   n => n > 5,
+//   n => n + 10
+// ]
+
+// const res = nums
+//   .map(n => fns.map(fn => fn(n)))
+//   .filter(arr => arr[0] && arr[1])
+//   .map(arr => arr[2])
+
+// console.log(res)
+// const nums = [2, 4, 6, 8]
+
+// const fns = [
+//   n => n % 4 === 0,
+//   n => n > 3
+// ]
+
+// const res = nums
+//   .map(n => fns.map(fn => fn(n)))
+//   .reduce((acc, arr) => acc + arr.filter(v => v).length, 0)
+
+// console.log(res)
+
+// const nums = [3, 5, 7]
+
+// const fns = [
+//   n => [n + 1, n * 2],
+//   n => [n % 2 === 0, n - 1]
+// ]
+
+// const res = nums
+//   .map(n => fns.map(fn => fn(n)))
+//   .flat(2)
+//   .filter(v => typeof v === 'number' && v > 5)
+
+// console.log(res)
+
+// const nums = [6, 12, 18, 24]
+
+// const fns = {
+//   a: n => n / 6,
+//   b: n => n % 8,
+//   c: n => n > 15
+// }
+
+// const keys = ['a', 'b', 'c']
+
+// const res = nums
+//   .map(n => keys.map(k => fns[k](n)))
+//   .findIndex(arr => arr[1] === 0 && arr[2])
+
+// console.log(res)
+const nums = [4, 5, 8, 10]
+
+const fns = [
+  n => n % 2 === 0,
+  n => n + 3,
+  n => n * n
 ]
 
-const res = productos
-  .filter(p => p.stock > 0)
-  .reduce((acc, curr) => {
-    acc.cantidad += 1
-    acc.valorTotal += curr.precio * curr.stock
-    acc.masCaro = curr.precio > acc.masCaro.precio ? curr : acc.masCaro
-    return acc
-  }, { cantidad: 0, valorTotal: 0, masCaro: productos.find(p => p.stock > 0) })
+const res = nums
+  .map(n => fns.map(fn => fn(n)))
+  .filter(arr => arr[0])
+  .map(arr => arr[1] + arr[2])
 
 console.log(res)
